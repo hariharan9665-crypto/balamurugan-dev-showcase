@@ -34,7 +34,6 @@ export const Route = createFileRoute("/")({
           name: "Balamurugan",
           jobTitle: "Web Developer",
           alumniOf: "Mount Zion College of Engineering and Technology",
-guess: undefined,
         }),
       },
     ],
