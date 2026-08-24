@@ -1,86 +1,96 @@
-import { ArrowRight, Mail, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { profile } from "@/data/portfolio";
-
-const codeLines = [
-  { text: "const developer = {", cls: "text-muted-foreground" },
-  { text: '  name: "Balamurugan",', cls: "text-foreground" },
-  { text: '  role: "Web Developer",', cls: "text-primary" },
-  { text: '  degree: "B.Tech IT",', cls: "text-foreground" },
-  { text: '  year: "3rd Year",', cls: "text-foreground" },
-  { text: '  stack: ["React", "Node", "MongoDB"],', cls: "text-accent" },
-  { text: "  available: true,", cls: "text-foreground" },
-  { text: "};", cls: "text-muted-foreground" },
-];
+import heroPhoto from "@/assets/hero section balamurugan.png";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-36 pb-24 sm:pt-44">
+    <section id="home" className="relative overflow-hidden pt-32 pb-20 sm:pt-40 lg:pt-48 min-h-[92vh] flex items-center">
+      {/* Ambient background glows */}
       <div
         aria-hidden
-        className="animate-float pointer-events-none absolute -top-32 -left-24 size-[26rem] rounded-full bg-primary/25 blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="animate-float pointer-events-none absolute -right-20 top-24 size-[22rem] rounded-full bg-glow/20 blur-[120px]"
-        style={{ animationDelay: "1.5s" }}
+        className="animate-float pointer-events-none absolute -bottom-16 -left-16 size-48 rounded-full bg-[#6a1b9a]/40 blur-2xl"
       />
 
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.05fr_1fr]">
-        <div className="animate-rise">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-xs tracking-wide text-muted-foreground">
-            <Sparkles size={14} className="text-primary" />
-            Open to internships & freelance work
-          </span>
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.05fr_0.95fr]">
+        {/* Left Column: Reference Layout Typography & Button */}
+        <div className="animate-rise relative z-10">
+          <h2 className="text-2xl font-light tracking-[0.2em] text-gray-300 uppercase sm:text-3xl lg:text-4xl">
+            I AM A PROFESSIONAL
+          </h2>
 
-          <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold sm:text-6xl">
-            Hi, I'm <span className="gradient-text">Balamurugan</span>
+          <h1 className="mt-3 text-4xl font-black tracking-tight text-[#ff007f] sm:text-6xl lg:text-6xl drop-shadow-[0_4px_25px_rgba(255,0,127,0.4)]">
+            WEB DEVELOPER
           </h1>
-          <p className="mt-4 font-mono text-sm text-accent sm:text-base">
-            3rd Year B.Tech IT Student &amp; Web Developer
-          </p>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            {profile.intro}
+
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-gray-300 font-light sm:text-lg">
+            {profile.intro} Specializing in building modern, responsive, and high-performance web applications.
           </p>
 
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elevate)] transition-transform hover:-translate-y-0.5"
-              style={{ backgroundImage: "var(--gradient-brand)" }}
-            >
-              View My Projects
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-            </a>
+          {/* Action Button: Hot Pink Pill Button "Hire Me" */}
+          <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-semibold text-foreground transition-all hover:border-primary hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#e91e63] px-9 py-3 text-base font-semibold text-white shadow-[0_10px_28px_rgba(233,30,99,0.55)] transition-all duration-300 hover:scale-105 hover:bg-[#d81b60] hover:shadow-[0_15px_35px_rgba(233,30,99,0.75)]"
             >
-              <Mail size={16} />
-              Contact Me
+              Hire Me
             </a>
           </div>
         </div>
 
-        <div className="animate-rise relative" style={{ animationDelay: "180ms" }}>
-          <div className="glass overflow-hidden rounded-3xl">
-            <div className="flex items-center gap-2 border-b border-border px-5 py-3">
-              <span className="size-3 rounded-full bg-destructive/70" />
-              <span className="size-3 rounded-full bg-chart-4/70" />
-              <span className="size-3 rounded-full bg-chart-2/70" />
-              <span className="ml-3 font-mono text-xs text-muted-foreground">developer.ts</span>
-            </div>
-            <pre className="overflow-x-auto px-5 py-6 font-mono text-[13px] leading-7">
-              {codeLines.map((line) => (
-                <div key={line.text} className={line.cls}>
-                  {line.text}
-                </div>
-              ))}
-            </pre>
-          </div>
+        {/* Right Column: Exact Reference Double-Lobe Fluid Organic Blob Art & Photo Cutout */}
+        <div className="animate-rise relative flex justify-center lg:justify-end" style={{ animationDelay: "180ms" }}>
+          <div className="relative flex items-center justify-center w-full max-w-[480px] h-[480px] sm:h-[540px]">
+            
+            {/* Dual-Lobe Fluid Organic SVG Background (Matching reference screenshot shape & colors) */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <svg
+                viewBox="0 0 600 600"
+                className="w-[118%] h-[118%] animate-morph-blob filter drop-shadow-[0_20px_50px_rgba(106,27,154,0.5)]"
+              >
+                <defs>
+                  <linearGradient id="refBlobGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#d81b60" />
+                    <stop offset="45%" stopColor="#c2185b" />
+                    <stop offset="70%" stopColor="#8e24aa" />
+                    <stop offset="100%" stopColor="#6a1b9a" />
+                  </linearGradient>
+                </defs>
 
-          <div className="glass animate-float absolute -bottom-6 -left-4 rounded-2xl px-4 py-3 text-xs sm:-left-8">
-            <p className="font-semibold text-foreground">MERN + MySQL</p>
-            <p className="text-muted-foreground">Full-stack ready</p>
+                {/* Main Double Lobe Organic Fluid Blob */}
+                <path
+                  fill="url(#refBlobGrad)"
+                  d="M450,320Q420,440,310,470Q200,500,120,410Q40,320,80,200Q120,80,240,70Q360,60,430,150Q500,240,450,320Z"
+                />
+              </svg>
+            </div>
+
+            {/* Top-Left Floating Solid Magenta Sphere (Exact reference placement) */}
+            <div
+              aria-hidden
+              className="animate-float absolute top-12 left-4 sm:left-2 z-20 size-14 sm:size-16 rounded-full bg-[#d81b60] shadow-[0_8px_25px_rgba(216,27,96,0.6)]"
+            />
+            
+            {/* Bottom-Right Floating Solid Purple Sphere (Exact reference placement) */}
+            <div
+              aria-hidden
+              className="animate-float absolute bottom-10 right-4 sm:right-2 z-20 size-8 sm:size-9 rounded-full bg-[#8e24aa] shadow-[0_6px_20px_rgba(142,36,170,0.6)]"
+              style={{ animationDelay: "2s" }}
+            />
+
+            {/* Balamurugan Cutout Photo Overlay matching reference cropped bottom */}
+            <div className="relative z-10 flex justify-center items-end h-full w-full overflow-hidden rounded-b-[4rem]">
+              <img
+                src={heroPhoto}
+                alt="Balamurugan - Web Developer"
+                width={500}
+                height={650}
+                className="h-[430px] sm:h-[490px] w-auto max-w-full object-contain object-bottom filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.55)] transition-transform duration-700 hover:scale-[1.03]"
+                style={{
+                  maskImage: "linear-gradient(to bottom, black 82%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 82%, transparent 100%)"
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
