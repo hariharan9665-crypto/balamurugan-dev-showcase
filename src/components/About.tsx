@@ -2,7 +2,7 @@ import { GraduationCap, Building2, CalendarDays, Code2, User } from "lucide-reac
 import { profile } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
-import photo from "@/assets/balamurugan.jpg.asset.json";
+import photo from "@/assets/balamurugan.jpg";
 
 const facts = [
   { icon: User, label: "Name", value: profile.name },
@@ -27,7 +27,7 @@ export function About() {
               className="absolute -top-24 -right-16 size-56 rounded-full bg-primary/20 blur-3xl"
             />
             <img
-              src={photo.url}
+              src={photo}
               alt="Portrait of Balamurugan"
               loading="lazy"
               width={600}
