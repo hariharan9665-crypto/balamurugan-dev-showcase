@@ -23,8 +23,8 @@ export function Hero() {
         {/* Main Grid: Responsive stacked on mobile / 2-columns on LG */}
         <div className="grid items-center gap-10 sm:gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           
-          {/* Left Column: Typography, Info Badge & CTAs */}
-          <div className="animate-rise relative z-10 text-left">
+          {/* Left Column: Typography, Info Badge & CTAs (Order 2 on mobile, Order 1 on desktop) */}
+          <div className="animate-rise relative z-10 text-left order-2 lg:order-1">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-gray-300 backdrop-blur-md mb-6">
               <Sparkles size={14} className="text-[#ff007f]" />
               Open for Internships & Web Projects
@@ -61,8 +61,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Photo Cutout & Fluid Blob (Optimized for Mobile Screens) */}
-          <div className="animate-rise relative flex justify-center lg:justify-end" style={{ animationDelay: "180ms" }}>
+          {/* Right Column: Photo Cutout & Fluid Blob (Order 1 on mobile, Order 2 on desktop) */}
+          <div className="animate-rise relative flex justify-center lg:justify-end order-1 lg:order-2" style={{ animationDelay: "180ms" }}>
             <div className="relative flex items-center justify-center w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[480px] h-[340px] sm:h-[460px] lg:h-[540px]">
               
               {/* Dual-Lobe Fluid Organic SVG Background (Resizes smoothly on mobile) */}
