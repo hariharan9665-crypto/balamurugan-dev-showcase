@@ -2,7 +2,7 @@ import { GraduationCap, Building2, CalendarDays, Code2, User } from "lucide-reac
 import { profile } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
-import photo from "@/assets/balamurugan.jpg";
+import photo from "@/assets/balamurugan.jpeg";
 
 const facts = [
   { icon: User, label: "Name", value: profile.name },
